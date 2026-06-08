@@ -1,4 +1,4 @@
-# Monitoring `[Mid]` `[Senior]`
+# Monitoring `` ``
 
 Data pipelines fail silently if you do not monitor them. Monitoring for Scala data systems covers three areas: application logging, JVM metrics, and framework-specific metrics (Spark, Akka).
 
@@ -117,7 +117,7 @@ Monitor these Akka-specific metrics:
 | Actor restart count | Supervision is firing = recurring failures |
 | Stream throughput | Drops indicate backpressure issues |
 
-## Alerting Strategy `[Senior]`
+## Alerting Strategy ``
 
 Set up alerts for:
 

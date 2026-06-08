@@ -1,6 +1,8 @@
-# Why Scala for Data `[Entry]` `[Mid]`
+# Why Scala for Data `` ``
 
 Scala occupies a specific niche in data engineering: type-safe, JVM-based, functional-first. Understanding when Scala is the right tool and when it is not is critical for making good architectural decisions.
+
+> 🖼️ **[IMAGE_PLACEHOLDER]** — Scala vs Python vs Java comparison data engineering
 
 ## Scala vs Python
 

@@ -1,4 +1,4 @@
-# Pattern Matching `[Entry]` `[Mid]`
+# Pattern Matching `` ``
 
 Pattern matching is Scala's mechanism for inspecting and decomposing data. It goes far beyond a switch statement: it matches on types, values, structures, and nested patterns. The compiler checks that matches are exhaustive.
 
@@ -102,7 +102,7 @@ yield value
 
 Using a pattern in `<-` filters elements that do not match. This is a concise way to extract successful results from a mixed list.
 
-## Sealed Traits and Exhaustiveness `[Mid]`
+## Sealed Traits and Exhaustiveness ``
 
 When you define a sealed trait, all subtypes must be in the same file. The compiler uses this to check exhaustiveness:
 

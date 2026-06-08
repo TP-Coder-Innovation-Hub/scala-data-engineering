@@ -1,4 +1,4 @@
-# What Is Scala `[Entry]`
+# What Is Scala ``
 
 Scala is a programming language created by Martin Odersky at EPFL (Swiss Federal Institute of Technology) and released in 2004. The name "Scala" is a portmanteau of **scalable language** -- it is designed to grow with the demands of its users, from small scripts to large distributed systems.
 
@@ -17,6 +17,8 @@ Scala was the result.
 ## FP + OO Fusion
 
 Scala's distinguishing feature is that it does not force you to choose between functional and object-oriented programming. Both paradigms are first-class:
+
+> 🖼️ **[IMAGE_PLACEHOLDER]** — Scala FP OO fusion functional objects both paradigms
 
 ```scala
 // OO: organize code into modules with interfaces

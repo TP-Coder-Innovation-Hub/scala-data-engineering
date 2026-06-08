@@ -8,11 +8,11 @@ This is the **Scala Data Engineering** learning path, part of TP-Coder Innovatio
 
 ## Audience
 
-- **Entry** (`[Entry]`): New to Scala or functional programming. Needs clear explanations, minimal jargon, working code examples.
-- **Mid** (`[Mid]`): Comfortable with Scala. Needs deeper patterns, performance considerations, framework internals.
-- **Senior** (`[Senior]`): Designing systems. Needs architectural trade-offs, decision frameworks, operational knowledge.
+- **Entry** (``): New to Scala or functional programming. Needs clear explanations, minimal jargon, working code examples.
+- **Mid** (``): Comfortable with Scala. Needs deeper patterns, performance considerations, framework internals.
+- **Senior** (``): Designing systems. Needs architectural trade-offs, decision frameworks, operational knowledge.
 
-Always indicate the target level with `[Entry]`, `[Mid]`, or `[Senior]` badges in headings or exercise descriptions.
+Always indicate the target level with ``, ``, or `` badges in headings or exercise descriptions.
 
 ## How to Help
 

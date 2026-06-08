@@ -1,4 +1,4 @@
-# Compiler vs Interpreter `[Entry]`
+# Compiler vs Interpreter ``
 
 Programming languages need to be translated into machine code that a CPU can execute. There are two main approaches: compilers and interpreters. Scala uses a compiler.
 

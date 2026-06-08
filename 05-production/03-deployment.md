@@ -1,4 +1,4 @@
-# Deployment `[Senior]`
+# Deployment ``
 
 Deploying Scala data systems involves configuring Spark clusters, Akka clusters, and JVM tuning. This guide covers the practical decisions.
 

@@ -1,4 +1,4 @@
-# Structured Streaming `[Mid]`
+# Structured Streaming ``
 
 Structured Streaming is Spark's API for continuous data processing. It treats a stream as an unbounded table: new rows are appended as data arrives. You write the same DataFrame operations you would use for batch, and Spark executes them continuously.
 
@@ -10,6 +10,8 @@ Stream: read stream -> transform (continuously) -> write stream
 ```
 
 The transformation code is identical. The difference is the source and sink:
+
+> 🖼️ **[IMAGE_PLACEHOLDER]** — Spark batch vs streaming same DataFrame API different source sink
 
 ```scala
 import org.apache.spark.sql.SparkSession
@@ -87,6 +89,8 @@ val windowQuery = windowed.writeStream
 ```
 
 `window(col("timestamp"), "1 hour")` creates tumbling 1-hour windows. `withWatermark` defines how late data is accepted -- events arriving more than 5 minutes after the window closes are dropped.
+
+> 🖼️ **[IMAGE_PLACEHOLDER]** — Spark structured streaming window aggregation watermark late data
 
 ## Exactly-Once Semantics
 

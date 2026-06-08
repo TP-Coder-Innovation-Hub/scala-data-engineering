@@ -1,4 +1,4 @@
-# Setup `[Entry]`
+# Setup ``
 
 Get a Scala development environment running. You need three things: a JDK, a build tool, and an editor.
 

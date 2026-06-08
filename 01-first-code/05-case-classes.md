@@ -1,4 +1,4 @@
-# Case Classes `[Entry]`
+# Case Classes ``
 
 Case classes are Scala's primary tool for modeling data. They are immutable data containers with built-in methods for comparison, pattern matching, and copying. If you are building a data pipeline, most of your types will be case classes.
 

@@ -1,4 +1,4 @@
-# Collections `[Entry]`
+# Collections ``
 
 Scala collections are immutable by default. Operations return new collections rather than modifying the original. The three you will use most: `List`, `Map`, and `Vector`.
 

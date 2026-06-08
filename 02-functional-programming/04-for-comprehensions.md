@@ -1,4 +1,4 @@
-# For-Comprehensions `[Entry]` `[Mid]`
+# For-Comprehensions `` ``
 
 For-comprehensions are Scala's syntax for chaining operations on wrapped values (collections, `Option`, `Either`, `Future`). They are not loops -- they are syntactic sugar for `map`, `flatMap`, and `filter`. Scala developers use them constantly.
 
@@ -101,7 +101,7 @@ do println(line)
 
 Use this for iteration with side effects. Prefer the `yield` version when producing values.
 
-## Why Scala Developers Love Them `[Mid]`
+## Why Scala Developers Love Them ``
 
 For-comprehensions work with any type that has `map` and `flatMap` methods:
 

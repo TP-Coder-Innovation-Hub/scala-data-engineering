@@ -1,4 +1,4 @@
-# Higher-Order Functions `[Entry]` `[Mid]`
+# Higher-Order Functions `` ``
 
 A higher-order function (HOF) takes a function as a parameter, returns a function, or both. HOFs are how you compose behavior in Scala. The three you will use constantly are `map`, `filter`, and `fold`.
 
@@ -91,7 +91,7 @@ val result = records
 
 Each step is a pure function. The data flows through a pipeline. You can read it top to bottom and understand exactly what happens.
 
-## Functions That Return Functions `[Mid]`
+## Functions That Return Functions ``
 
 HOFs also create configurable behavior:
 

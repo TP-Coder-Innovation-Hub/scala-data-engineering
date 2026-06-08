@@ -1,4 +1,4 @@
-# Spark SQL `[Entry]` `[Mid]`
+# Spark SQL `` ``
 
 Spark SQL lets you write SQL queries against DataFrames. Register a DataFrame as a temporary view, then query it with SQL. For analysts and data engineers who think in SQL, this is the fastest path to working with Spark.
 

@@ -1,4 +1,4 @@
-# Testing `[Mid]`
+# Testing ``
 
 Testing data pipelines is different from testing web applications. You test transformations (pure functions), integrations (Spark, databases), and actor behavior (message protocols).
 

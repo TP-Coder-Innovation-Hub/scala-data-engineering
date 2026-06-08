@@ -1,4 +1,4 @@
-# What Is the Actor Model `[Entry]` `[Mid]`
+# What Is the Actor Model `` ``
 
 The actor model is a paradigm for building concurrent and distributed systems. Instead of threads, locks, and shared memory, you work with **actors**: independent units of computation that communicate exclusively by sending messages to each other.
 
@@ -30,6 +30,8 @@ The actor model eliminates shared mutable state entirely. An actor is:
 3. **Behavior** defined by how it responds to each message.
 
 Actors communicate by sending messages. The rules:
+
+> 🖼️ **[IMAGE_PLACEHOLDER]** — actor model message passing private state mailbox no shared memory
 
 - **No shared state.** Each actor owns its data. Other actors cannot read or write it.
 - **Message passing only.** The only way to interact with an actor is to send it a message.
@@ -71,6 +73,8 @@ The actor's `count` is safe because only one message is processed at a time. No 
 ## Supervision: Actors Watch Their Children
 
 Actors form a hierarchy. A parent actor supervises its children. When a child actor fails (throws an exception), the parent decides what to do:
+
+> 🖼️ **[IMAGE_PLACEHOLDER]** — actor supervision hierarchy parent child restart resume stop
 
 - **Restart**: Create a new actor with fresh state. The most common strategy for data pipelines.
 - **Resume**: Skip the failed message and continue.

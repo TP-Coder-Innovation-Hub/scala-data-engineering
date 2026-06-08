@@ -1,4 +1,4 @@
-# Sequential, Decision, Iteration `[Entry]`
+# Sequential, Decision, Iteration ``
 
 Every program, regardless of language, is built from three constructs: sequential execution, conditional decisions, and iterative loops. Master these and you can express any computation.
 

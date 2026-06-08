@@ -1,4 +1,4 @@
-# Functions `[Entry]`
+# Functions ``
 
 Functions are the core building block of Scala. They are first-class: you can assign them to variables, pass them as arguments, and return them from other functions.
 

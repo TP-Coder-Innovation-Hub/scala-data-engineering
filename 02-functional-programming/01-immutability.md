@@ -1,4 +1,4 @@
-# Immutability `[Entry]`
+# Immutability ``
 
 Immutable data cannot be changed after creation. In Scala, you default to immutability. Every `val` binding and every standard collection is immutable. This is not a limitation -- it is a correctness guarantee.
 
@@ -77,3 +77,5 @@ val b = 0 :: a   // b = List(0, 1, 2, 3)
 ```
 
 `b` shares the tail `List(1, 2, 3)` with `a`. Only the new head `0` is allocated. This structural sharing makes immutable collections efficient for most workloads. The JVM's garbage collector handles the rest.
+
+> 🖼️ **[IMAGE_PLACEHOLDER]** — immutable collections structural sharing persistent data structures sharing tails

@@ -1,4 +1,4 @@
-# Supervision `[Mid]`
+# Supervision ``
 
 When an actor fails, its parent decides what happens. This is supervision: a hierarchical fault tolerance mechanism that is central to building reliable actor systems.
 
@@ -71,6 +71,8 @@ override val supervisorStrategy: SupervisorStrategy =
 | **Resume** | Skip the failed message, continue with the next. State is preserved. | Non-critical failures where skipping one message is acceptable (e.g., malformed record in a high-throughput stream). |
 | **Stop** | Permanently terminate the actor. | The failure is unrecoverable (corrupted config, missing resource). |
 | **Escalate** | Let the parent's parent decide. | The supervisor does not know how to handle this failure. |
+
+> 🖼️ **[IMAGE_PLACEHOLDER]** — supervision strategy OneForOne restart resume stop escalate decision tree
 
 ## Step-by-Step Example
 

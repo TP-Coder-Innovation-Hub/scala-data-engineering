@@ -1,4 +1,4 @@
-# What Is Programming `[Entry]`
+# What Is Programming ``
 
 A program is a set of instructions that tells a computer what to do. Think of it like a recipe.
 

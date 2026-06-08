@@ -1,4 +1,4 @@
-# What Is Spark `[Entry]`
+# What Is Spark ``
 
 Apache Spark is a distributed data processing engine. It splits large datasets across multiple machines, processes them in parallel, and combines the results. Spark is written in Scala and runs on the JVM.
 
@@ -46,6 +46,8 @@ graph TD
 
 Step by step:
 
+> 🖼️ **[IMAGE_PLACEHOLDER]** — Apache Spark architecture driver executors partitions cluster manager shuffle
+
 1. **Driver**: Your SparkSession. It converts your code into a logical plan, optimizes it, and splits it into tasks.
 2. **Cluster Manager**: Allocates executors on worker nodes. Spark supports YARN, Kubernetes, and its own standalone cluster manager.
 3. **Executors**: JVM processes on worker nodes. Each executor runs tasks and stores cached data. Data is split into **partitions** -- each partition is processed by one task on one executor.
@@ -85,6 +87,8 @@ When you run this in local mode, the driver and executor run in the same JVM. Wh
 ## Lazy Evaluation
 
 Spark transformations are lazy. Calling `filter`, `groupBy`, or `withColumn` does not execute anything. It builds a logical plan. Execution happens only when you call an **action**: `show`, `collect`, `write`, `count`.
+
+> 🖼️ **[IMAGE_PLACEHOLDER]** — Spark lazy evaluation transformation logical plan action triggers execution
 
 ```scala
 val transformed = df

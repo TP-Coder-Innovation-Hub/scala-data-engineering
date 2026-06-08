@@ -1,4 +1,4 @@
-# Control Flow `[Entry]`
+# Control Flow ``
 
 Scala control flow is expression-oriented. `if`, `match`, and `for` produce values. This is a shift from statement-oriented languages.
 

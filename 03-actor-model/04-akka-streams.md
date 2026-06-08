@@ -1,4 +1,4 @@
-# Akka Streams `[Mid]`
+# Akka Streams ``
 
 Akka Streams is a library for processing streams of data with built-in backpressure. It is built on top of the actor model and implements the Reactive Streams specification.
 

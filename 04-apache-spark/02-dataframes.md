@@ -1,4 +1,4 @@
-# DataFrames `[Entry]` `[Mid]`
+# DataFrames `` ``
 
 DataFrames are Spark's primary API for data processing. A DataFrame is a distributed table with named columns and a defined schema -- conceptually similar to a table in a relational database or a DataFrame in pandas, but distributed across a cluster.
 
@@ -108,7 +108,7 @@ val top10 = summary
   .limit(10)
 ```
 
-## Why DataFrames Over RDDs `[Mid]`
+## Why DataFrames Over RDDs ``
 
 DataFrames go through the Catalyst optimizer. RDDs do not.
 

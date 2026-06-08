@@ -35,9 +35,9 @@ These three pillars reinforce each other: FP gives you correct single-node code,
 
 | Level | Badge | You Should |
 |-------|-------|------------|
-| Entry | `[Entry]` | Know basic programming. New to Scala or FP. |
-| Mid | `[Mid]` | Write Scala comfortably. Understand map/flatMap. |
-| Senior | `[Senior]` | Design distributed systems. Make architectural decisions. |
+| Entry | `` | Know basic programming. New to Scala or FP. |
+| Mid | `` | Write Scala comfortably. Understand map/flatMap. |
+| Senior | `` | Design distributed systems. Make architectural decisions. |
 
 ---
 

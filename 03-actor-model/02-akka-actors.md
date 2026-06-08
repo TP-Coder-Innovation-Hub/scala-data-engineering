@@ -1,4 +1,4 @@
-# Akka Actors `[Entry]` `[Mid]`
+# Akka Actors `` ``
 
 Akka (now Apache Pekko for the open-source fork) implements the actor model on the JVM. This guide shows how to create actors, send messages, and manage their lifecycle.
 
