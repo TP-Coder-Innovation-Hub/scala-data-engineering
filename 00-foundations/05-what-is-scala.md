@@ -18,7 +18,17 @@ Scala was the result.
 
 Scala's distinguishing feature is that it does not force you to choose between functional and object-oriented programming. Both paradigms are first-class:
 
-> 🖼️ **[IMAGE_PLACEHOLDER]** — Scala FP OO fusion functional objects both paradigms
+```mermaid
+graph TD
+    subgraph "Functional Programming"
+        FP["Pure functions\nImmutability\nComposition"]
+    end
+    subgraph "Object-Oriented"
+        OO["Classes\nTraits\nEncapsulation"]
+    end
+    FP -->|"Scala fuses"| SCALA["Scala\nBoth paradigms unified"]
+    OO -->|"Scala fuses"| SCALA
+```
 
 ```scala
 // OO: organize code into modules with interfaces

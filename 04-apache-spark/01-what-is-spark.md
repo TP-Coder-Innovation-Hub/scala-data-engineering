@@ -46,7 +46,18 @@ graph TD
 
 Step by step:
 
-> 🖼️ **[IMAGE_PLACEHOLDER]** — Apache Spark architecture driver executors partitions cluster manager shuffle
+```mermaid
+graph TD
+    CM[Cluster Manager] --> DRV[Driver Program]
+    CM --> EX1[Executor 1\nCache + Tasks]
+    CM --> EX2[Executor 2\nCache + Tasks]
+    CM --> EX3[Executor 3\nCache + Tasks]
+    DRV -->|"split work"| EX1
+    DRV -->|"split work"| EX2
+    DRV -->|"split work"| EX3
+    EX1 <-->|"shuffle"| EX2
+    EX2 <-->|"shuffle"| EX3
+```
 
 1. **Driver**: Your SparkSession. It converts your code into a logical plan, optimizes it, and splits it into tasks.
 2. **Cluster Manager**: Allocates executors on worker nodes. Spark supports YARN, Kubernetes, and its own standalone cluster manager.
@@ -88,7 +99,14 @@ When you run this in local mode, the driver and executor run in the same JVM. Wh
 
 Spark transformations are lazy. Calling `filter`, `groupBy`, or `withColumn` does not execute anything. It builds a logical plan. Execution happens only when you call an **action**: `show`, `collect`, `write`, `count`.
 
-> 🖼️ **[IMAGE_PLACEHOLDER]** — Spark lazy evaluation transformation logical plan action triggers execution
+```mermaid
+flowchart LR
+    DF[DataFrame] --> T1["filter() — plan"]
+    T1 --> T2["map() — plan"]
+    T2 --> T3["groupBy() — plan"]
+    T3 --> ACT["collect() — ACTION!"]
+    ACT --> EXEC["Now Spark executes\nthe entire plan"]
+```
 
 ```scala
 val transformed = df

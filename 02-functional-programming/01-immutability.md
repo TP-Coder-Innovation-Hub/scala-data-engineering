@@ -78,4 +78,13 @@ val b = 0 :: a   // b = List(0, 1, 2, 3)
 
 `b` shares the tail `List(1, 2, 3)` with `a`. Only the new head `0` is allocated. This structural sharing makes immutable collections efficient for most workloads. The JVM's garbage collector handles the rest.
 
-> 🖼️ **[IMAGE_PLACEHOLDER]** — immutable collections structural sharing persistent data structures sharing tails
+```mermaid
+graph TD
+    subgraph "Mutable: copy everything"
+        L1["List [1,2,3]"] -->|"add 4"| L2["List [1,2,3,4]\ncopy all elements"]
+    end
+    subgraph "Immutable: structural sharing"
+        P1["List [1,2,3]"] -->|"prepend 0"| P2["List [0,1,2,3]\n0 → shares tail with original"]
+        P1 -.->|"shared tail"| P2
+    end
+```

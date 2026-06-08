@@ -31,7 +31,13 @@ The actor model eliminates shared mutable state entirely. An actor is:
 
 Actors communicate by sending messages. The rules:
 
-> 🖼️ **[IMAGE_PLACEHOLDER]** — actor model message passing private state mailbox no shared memory
+```mermaid
+graph TD
+    A1["Actor A\nmailbox: []\nstate: x=1"] -->|"send msg"| A2["Actor B\nmailbox: [msg]"]
+    A2 -->|"send reply"| A1
+    A3["Actor C"] -->|"send msg"| A2
+    Note1["No shared state\nOnly message passing"]
+```
 
 - **No shared state.** Each actor owns its data. Other actors cannot read or write it.
 - **Message passing only.** The only way to interact with an actor is to send it a message.
@@ -74,7 +80,15 @@ The actor's `count` is safe because only one message is processed at a time. No 
 
 Actors form a hierarchy. A parent actor supervises its children. When a child actor fails (throws an exception), the parent decides what to do:
 
-> 🖼️ **[IMAGE_PLACEHOLDER]** — actor supervision hierarchy parent child restart resume stop
+```mermaid
+graph TD
+    ROOT["/user (root)"] --> PARENT["Parent Actor"]
+    PARENT --> C1["Child 1"]
+    PARENT --> C2["Child 2"]
+    C2 --> GC["Grandchild"]
+    PARENT -.->|"supervises"| C1
+    PARENT -.->|"restart/stop"| C2
+```
 
 - **Restart**: Create a new actor with fresh state. The most common strategy for data pipelines.
 - **Resume**: Skip the failed message and continue.

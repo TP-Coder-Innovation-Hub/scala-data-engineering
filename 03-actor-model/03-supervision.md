@@ -72,7 +72,17 @@ override val supervisorStrategy: SupervisorStrategy =
 | **Stop** | Permanently terminate the actor. | The failure is unrecoverable (corrupted config, missing resource). |
 | **Escalate** | Let the parent's parent decide. | The supervisor does not know how to handle this failure. |
 
-> 🖼️ **[IMAGE_PLACEHOLDER]** — supervision strategy OneForOne restart resume stop escalate decision tree
+```mermaid
+flowchart TD
+    ERR[Child throws exception] --> Q{Strategy?}
+    Q -->|OneForOne| A1[Affect only failed child]
+    Q -->|AllForOne| A2[Restart ALL children]
+    A1 --> D{Decision}
+    D -->|Resume| R1[Keep state, skip message]
+    D -->|Restart| R2[Clear state, recreate]
+    D -->|Stop| R3[Permanently stop child]
+    D -->|Escalate| R4[Parent handles it]
+```
 
 ## Step-by-Step Example
 

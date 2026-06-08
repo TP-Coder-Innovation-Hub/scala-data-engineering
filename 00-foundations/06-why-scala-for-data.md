@@ -2,7 +2,24 @@
 
 Scala occupies a specific niche in data engineering: type-safe, JVM-based, functional-first. Understanding when Scala is the right tool and when it is not is critical for making good architectural decisions.
 
-> 🖼️ **[IMAGE_PLACEHOLDER]** — Scala vs Python vs Java comparison data engineering
+```mermaid
+graph LR
+    subgraph Scala
+        S1["Type safety: ★★★★★"]
+        S2["Performance: ★★★★"]
+        S3["Ecosystem: ★★★★"]
+    end
+    subgraph Python
+        P1["Type safety: ★★"]
+        P2["Performance: ★★"]
+        P3["Ecosystem: ★★★★★"]
+    end
+    subgraph Java
+        J1["Type safety: ★★★★"]
+        J2["Performance: ★★★★★"]
+        J3["Ecosystem: ★★★★"]
+    end
+```
 
 ## Scala vs Python
 

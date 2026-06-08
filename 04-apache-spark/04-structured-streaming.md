@@ -11,7 +11,18 @@ Stream: read stream -> transform (continuously) -> write stream
 
 The transformation code is identical. The difference is the source and sink:
 
-> 🖼️ **[IMAGE_PLACEHOLDER]** — Spark batch vs streaming same DataFrame API different source sink
+```mermaid
+graph LR
+    subgraph "Batch"
+        BS[CSV Files] --> BAPI[DataFrame API]
+        BAPI --> BD[Database]
+    end
+    subgraph "Streaming"
+        SS[Kafka Topic] --> SAPI[DataFrame API]
+        SAPI --> SD[Console/Parquet]
+    end
+    BAPI ===|"same API"| SAPI
+```
 
 ```scala
 import org.apache.spark.sql.SparkSession
@@ -90,7 +101,14 @@ val windowQuery = windowed.writeStream
 
 `window(col("timestamp"), "1 hour")` creates tumbling 1-hour windows. `withWatermark` defines how late data is accepted -- events arriving more than 5 minutes after the window closes are dropped.
 
-> 🖼️ **[IMAGE_PLACEHOLDER]** — Spark structured streaming window aggregation watermark late data
+```mermaid
+graph LR
+    E1["Event 10:01"] --> W1["Window 10:00-10:05"]
+    E2["Event 10:03"] --> W1
+    E3["Event 10:04"] --> W1
+    E4["Event 10:07"] --> W2["Window 10:05-10:10"]
+    E5["Event 10:01\n(late!)"] -->|"< watermark\ndropped"| X["Dropped"]
+```
 
 ## Exactly-Once Semantics
 
