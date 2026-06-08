@@ -64,45 +64,17 @@ These concepts recur across modules. Agents should reference them consistently:
 | doobie | 1.x | Type-safe JDBC via cats.effect |
 | circe | 0.14.x | JSON encoding/decoding via type classes |
 
-### Scala 3 Syntax Reference
-
-```scala
-// Enums (not sealed trait + case object)
-enum EventType:
-  case Click, Purchase, PageView, Error
-
-// Extension methods (not implicit class)
-extension (s: String)
-  def toEventType: Option[EventType] =
-    EventType.values.find(_.toString == s)
-
-// Given instances (not implicit val)
-given JsonEncoder[EventType] with
-  def encode(t: EventType): String = s""""${t.toString}""""
-
-// Using clauses (not implicit parameters)
-def writeEvent[A](event: A)(using enc: JsonEncoder[A]): String =
-  enc.encode(event)
-
-// Significant indentation (optional braces)
-def process(data: List[String]): List[Int] =
-  data
-    .filter(_.nonEmpty)
-    .map(_.length)
-```
-
 ## Repository Structure
 
 ```
 scala-data-engineering/
-  README.md              # This fundamentals guide (Module 1)
-  AGENTS.md              # This file
-  modules/
-    01-fundamentals/     # Exercises and examples for this guide
-    02-streaming-pipeline/ # Kafka-to-Delta-Lake pipeline (Module 2)
-    03-type-safe-transforms/ # cats, circe, generic programming (Module 3)
-    04-testing/          # Property-based testing, test containers (Module 4)
-    05-production/       # Monitoring, schema evolution, data quality (Module 5)
+  README.md
+  AGENTS.md
+  00-foundations/       # Programming fundamentals
+  01-first-code/        # First Scala programs
+  02-functional-programming/  # FP in Scala
+  03-actor-model/       # Actor model and Akka
+  04-apache-spark/      # Distributed data processing
+  05-production/        # Testing, monitoring, deployment
+  06-capstone/          # End-to-end project
 ```
-
-When adding content, place it in the appropriate module directory. If no module directory exists yet, create it following the naming convention `NN-topic-name` with a zero-padded module number.
